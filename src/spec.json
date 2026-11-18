@@ -1,0 +1,282 @@
+{
+  "title": "Controllo e riconciliazione delle riscossioni",
+  "description": "Prototipo per monitorare riscossioni inventate, confrontare importi attesi e versamenti registrati, consultare gli esiti dei controlli e preparare un prospetto di riconciliazione. Il caricamento e l’esportazione sono rappresentati come funzioni dimostrative, senza allegati né collegamenti esterni.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "dashboard",
+      "title": "Dashboard riscossioni",
+      "description": "Panoramica degli importi attesi e registrati, con andamento mensile e riepilogo delle anomalie.",
+      "metrics": [
+        {
+          "label": "Importo atteso",
+          "value": "€ 8.450,00"
+        },
+        {
+          "label": "Importo registrato",
+          "value": "€ 7.950,00"
+        },
+        {
+          "label": "Differenza netta",
+          "value": "€ 500,00"
+        },
+        {
+          "label": "Versamenti rilevati",
+          "value": "4"
+        },
+        {
+          "label": "Controlli con anomalia",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Mese",
+        "Importo atteso",
+        "Importo registrato",
+        "Differenza"
+      ],
+      "rows": [
+        [
+          "Gennaio",
+          "€ 1.800,00",
+          "€ 1.800,00",
+          "€ 0,00"
+        ],
+        [
+          "Febbraio",
+          "€ 2.150,00",
+          "€ 1.650,00",
+          "€ 500,00"
+        ],
+        [
+          "Marzo",
+          "€ 2.300,00",
+          "€ 2.300,00",
+          "€ 0,00"
+        ],
+        [
+          "Aprile",
+          "€ 2.200,00",
+          "€ 2.200,00",
+          "€ 0,00"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "riconciliazione",
+      "title": "Riconciliazione",
+      "description": "Confronto dimostrativo tra movimenti inventati del rendiconto e importi attesi. Le identità dei contribuenti sono sostituite da codici fittizi.",
+      "metrics": [
+        {
+          "label": "Corrispondenze",
+          "value": "2"
+        },
+        {
+          "label": "Importi diversi",
+          "value": "1"
+        },
+        {
+          "label": "Pagamenti mancanti",
+          "value": "1"
+        },
+        {
+          "label": "Possibili doppi versamenti",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Riferimento contribuente",
+        "Periodo",
+        "Importo atteso",
+        "Importo registrato",
+        "Esito",
+        "Nota"
+      ],
+      "rows": [
+        [
+          "Lumo-014",
+          "Gennaio",
+          "€ 600,00",
+          "€ 600,00",
+          "Corrispondente",
+          "Importi coincidenti"
+        ],
+        [
+          "Vela-027",
+          "Febbraio",
+          "€ 950,00",
+          "€ 450,00",
+          "Differenza",
+          "Registrato inferiore all’atteso"
+        ],
+        [
+          "Nubi-031",
+          "Marzo",
+          "€ 700,00",
+          "€ 0,00",
+          "Mancante",
+          "Nessun movimento associato"
+        ],
+        [
+          "Lumo-042",
+          "Aprile",
+          "€ 500,00",
+          "€ 1.000,00",
+          "Possibile doppio",
+          "Due movimenti da € 500,00"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "movimenti",
+      "title": "Movimenti registrati",
+      "description": "Elenco filtrabile dei movimenti inventati rilevati per la riconciliazione. Gli importi sono dati dimostrativi.",
+      "metrics": [
+        {
+          "label": "Movimenti totali",
+          "value": "5"
+        },
+        {
+          "label": "Versamenti abbinati",
+          "value": "4"
+        },
+        {
+          "label": "Movimenti da verificare",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Riferimento movimento",
+        "Data",
+        "Riferimento contribuente",
+        "Causale",
+        "Importo"
+      ],
+      "rows": [
+        [
+          "MV-LU-101",
+          "12/01/2025",
+          "Lumo-014",
+          "Riscossione periodo",
+          "€ 600,00"
+        ],
+        [
+          "MV-VE-204",
+          "08/02/2025",
+          "Vela-027",
+          "Riscossione periodo",
+          "€ 450,00"
+        ],
+        [
+          "MV-NU-309",
+          "16/03/2025",
+          "Lumo-042",
+          "Riscossione periodo",
+          "€ 500,00"
+        ],
+        [
+          "MV-NU-310",
+          "16/03/2025",
+          "Lumo-042",
+          "Riscossione periodo",
+          "€ 500,00"
+        ],
+        [
+          "MV-LO-411",
+          "22/04/2025",
+          "Vela-019",
+          "Riscossione periodo",
+          "€ 2.200,00"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "controlli",
+      "title": "Esiti dei controlli",
+      "description": "Registro filtrabile dei controlli svolti sul confronto dimostrativo, con esito e motivazione sintetica.",
+      "metrics": [
+        {
+          "label": "Controlli effettuati",
+          "value": "5"
+        },
+        {
+          "label": "Esito regolare",
+          "value": "2"
+        },
+        {
+          "label": "Da verificare",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Controllo",
+        "Data",
+        "Riferimento",
+        "Esito",
+        "Dettaglio"
+      ],
+      "rows": [
+        [
+          "Abbinamento importi",
+          "05/05/2025",
+          "Lumo-014",
+          "Regolare",
+          "Atteso e registrato coincidono"
+        ],
+        [
+          "Verifica differenze",
+          "05/05/2025",
+          "Vela-027",
+          "Anomalia",
+          "Differenza di € 500,00"
+        ],
+        [
+          "Verifica pagamenti mancanti",
+          "05/05/2025",
+          "Nubi-031",
+          "Anomalia",
+          "Importo atteso senza movimento associato"
+        ],
+        [
+          "Ricerca duplicati",
+          "05/05/2025",
+          "Lumo-042",
+          "Anomalia",
+          "Due movimenti con stesso importo e riferimento"
+        ],
+        [
+          "Riepilogo mensile",
+          "05/05/2025",
+          "Gennaio–Aprile",
+          "Regolare",
+          "Totali aggregati disponibili"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "importazione",
+      "title": "Nuova riconciliazione",
+      "description": "Imposta una riconciliazione dimostrativa e inserisci le righe attese. L’interfaccia non carica [link rimosso] i comandi di importazione e produzione del prospetto sono rappresentativi.",
+      "metrics": [],
+      "columns": [
+        "Riferimento contribuente",
+        "Periodo",
+        "Importo atteso"
+      ],
+      "rows": [],
+      "form": [
+        "Riferimento contribuente",
+        "Periodo",
+        "Importo atteso"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "ardesia",
+    "fonts": "istituzionale"
+  }
+}
